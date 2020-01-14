@@ -24,7 +24,8 @@ namespace MicroRabbit.Transfer.Domain.EventHandlers
             {
                 FromAccount = @event.From,
                 ToAccount = @event.To,
-                TransferAmount = @event.Amount
+                TransferAmount = @event.Amount,
+                TransferTime = DateTime.Now
             });
             return Task.CompletedTask;
         }
